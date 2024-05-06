@@ -22,9 +22,11 @@
 
         <form id="processTextForm" style="display:none;">
             <label for="content">Content:</label>
-            <input type="text" id="content" name="content"><br><br>
+            <textarea type="text" id="content" name="content"> </textarea>
 
-            <label for="ignoredWords">Ignored Words (comma-separated):</label>
+            <br><br>
+
+            <label for="ignoredWords">Ignored Words (comma-separated i.e: the,a,you,me). {Note:- 'the' would be neglected if this field is empty} :</label>
             <input type="text" id="ignoredWords" name="ignoredWords"><br><br>
 
             <label for="numberOfWords">Number of Words:</label>
