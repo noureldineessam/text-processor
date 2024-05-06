@@ -41,7 +41,27 @@ This project demonstrates the implementation of text processing and user managem
     npm run start:dev
     ```
 
+## User Input and Report Viewing HTML Pages
+
+This repository contains several HTML files located in the `views` folder, each serving a different purpose for user input and report viewing. These HTML files are very simple and are just to demo the functionality Below are the descriptions of these HTML files:
+
+1. **user-input.html**: This HTML file provides a simple user interface for creating a user and processing text. It includes input fields for the user's email, text content, list of ignored words, and the number of words to be processed. The user can create a new user and then process text, which will fetch the most repeated words from the processed text.
+
+2. **get-single-report.html**: This HTML file allows users to input a report ID and fetch the corresponding report from the server. It includes an input field for the report ID and a button to submit the request. Upon submitting the form, the report details are displayed, showing the words and their respective counts.
+
+3. **get-reports-by-email.html**: This HTML file enables users to send a report by providing the report ID. It includes an input field for the report ID and a button to send the report. Upon submission, the report is sent to the user's email address associated with the provided report ID.
+
+These HTML files provide intuitive interfaces for users to interact with the application, allowing them to create users, process text, view reports, and send reports via email.
+
+
 ## APIs
+
+Swagger Documentation
+Swagger documentation is available for both APIs. After running the application locally, navigate to
+``` 
+http://localhost:3000/api
+``` 
+to explore the API documentation.
 
 ### Text Processing API
 
@@ -75,8 +95,3 @@ This project includes unit tests for both text processing and user management AP
 
 ```bash
 npm run test
-
-
-
-Swagger Documentation
-Swagger documentation is available for both APIs. After running the application locally, navigate to http://localhost:3000/api to explore the API documentation.
