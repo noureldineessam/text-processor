@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create User and Process Text</title>
+</head>
+<body>
+
+    <div id="languageWarning" style="display: none;">
+        Sorry, this website is only available in English language browsers.
+    </div>
+
+    <div id="'pageContent">
+        <h2>Create User</h2>
+        <form id="createUserForm">
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+            <button type="button" onclick="createUser()">Create User</button>
+        </form>
+
+        <h2>Process Text</h2>
+
+        <form id="processTextForm" style="display:none;">
+            <label for="content">Content:</label>
+            <input type="text" id="content" name="content"><br><br>
+
+            <label for="ignoredWords">Ignored Words (comma-separated):</label>
+            <input type="text" id="ignoredWords" name="ignoredWords"><br><br>
+
+            <label for="numberOfWords">Number of Words:</label>
+            <input type="number" id="numberOfWords" name="numberOfWords"><br><br>
+
+            <button type="button" onclick="processText()">Send Data</button>
+        </form>
+
+        <div id="mostRepeatedWords">
+            <h2>Most Repeated Words</h2>
+            <ul id="wordsList"></ul>
+        </div>
+
+    </div>
+
+    <script>
+
+        window.onload = function() {
+            const language = navigator.language || navigator.userLanguage;
+            if (!language.startsWith('en')) {
+                document.getElementById('languageWarning').style.display = 'block';
+                document.getElementById('pageContent').style.display = 'none';
+            }
+        };
+        let userId=null
+        async function createUser() {
+            const email = document.getElementById('email').value;
+            try {
+                const response = await fetch('http://localhost:3000/users', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ email }),
+                });
+                if (response.ok) {
+                    document.getElementById('processTextForm').style.display = 'block';
+                    console.log('User created successfully');
+                    userId = (await response.json()).userId;
+                    console.log('User ID:', userId);
+                } else {
+                    console.error('Failed to create user');
+                }
+            } catch (error) {
+                console.error('Error:', error);
+            }
+        }
+
+        async function processText() {
+            const content = document.getElementById('content').value;
+            const ignoredWords = document.getElementById('ignoredWords').value.split(',');
+            const numberOfWords = parseInt(document.getElementById('numberOfWords').value, 10);
+  
+            // Assuming you have an endpoint to process text and update user reports
+            try {
+                const response = await fetch('http://localhost:3000/processor', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ content, ignoredWords, numberOfWords, userId }),
+                });
+                const data = await response.json();
+                if (response.ok) {
+                    console.log('Text processed and user report updated:', data);
+                    //  Populate the most repeated words section
+                    const wordsList = document.getElementById('wordsList');
+                    wordsList.innerHTML = ''; // Clear the list
+                    data.data.forEach(([word, count]) => {
+                        const listItem = document.createElement('li');
+                        listItem.textContent = `${word}: ${count} times`;
+                        wordsList.appendChild(listItem);
+                    });
+                } else {
+                    console.error('Failed to process text');
+                }
+            } catch (error) {
+                console.error('Error:', error);
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,168 @@
+Skip to main content
+GE LOGO
+EXPLORE GE VERNOVA
+TRIALS & DEMOS
+Electrification Software
+Software
+Services
+Industries
+
+Partners
+Support
+Innovation
+About Us
+
+Product Documentation
+GE Vernova’s product portfolio can help you put your industrial data to work with software that helps you better operate, analyze and optimize your business processes.
+
+Proficy: Portfolio Solutions
+Leverage cross-portfolio technology for configuration, data management, and more.
+
+Quick Start Guides
+Proficy Licensing
+ 
+Historian, iFIX and IGS
+ 
+iFIX Upgrade
+Common components
+Proficy Licensing
+
+Proficy Authentication
+
+Configuration Hub
+
+MQTT Client
+
+Historian, Analytics and Reporting
+Proficy Historian
+
+Proficy Historian for Cloud (AWS)
+
+Proficy Historian for Cloud (Azure)
+
+Proficy Historian Edge
+
+Proficy CSense
+
+Proficy Sensor Health
+
+Proficy Operations Hub
+Proficy Operations Hub
+Drivers
+MT Connect
+ 
+Industrial Gateway Server (IGS)
+Proficy HMI/SCADA & MES
+Manage and optimize operations with best-in-class HMI/SCADA and MES.
+
+Proficy HMI/SCADA
+iFIX
+
+CIMPLICITY
+
+Proficy Webspace
+
+Proficy Batch Execution
+
+Proficy Web HMI
+
+Proficy Smart Factory (MES & Production Optimization)
+Proficy Plant Applications
+
+Proficy Manufacturing Data Cloud
+
+Tracker
+
+Proficy Orchestration Hub
+
+Proficy Workflow
+
+Production Manager
+
+Microsoft® Azure Support
+Proficy Software
+APM and OPM
+Increase productivity, availability, and longevity for your industrial and manufacturing requirements using our IIOT solutions.
+
+Availability and Compliance
+SaaS Availability SLS
+ 
+Security Certifications
+Asset Performance Management
+On-Premises APM (V5)
+
+APM Classic (V4 or lower)
+
+Industrial Data Diagnostics
+
+Cloud APM
+
+SmartSignal Classic
+
+Operations Performance Management
+OPM
+Platform
+Edge Software
+
+Essentials
+
+Discover and Learn
+VIDEO
+Self-Help Videos on YouTube
+Watch our self-help videos and learn how to optimize your GE Vernova software.  
+
+
+See Us on YouTube
+TRAINING
+Educational Services
+Product training, industry education, and rigorous certification programs to meet the needs of customers’ personnel.
+
+
+Explore our Education Services
+CUSTOMER PORTAL
+Support Services and Communities
+Knowledge to unlock your software's potential.
+
+
+Visit customer portal
+Explore GE Vernova’s industrial apps
+card-asset-performance-mgmt-768x768.jpg
+INDUSTRIAL SOFTWARE
+Asset Performance Management (APM) Software
+Optimizing the performance of assets to increase reliability and availability, minimize costs, and reduce operational risks.
+
+
+Read More
+GE Digital's MES software for manufacturers helps optimize operationsGE Digital's MES software for manufacturers helps optimize operations
+INDUSTRIAL SOFTWARE
+Proficy Smart Factory - MES Solutions
+Reach manufacturing excellence through Industrial IoT insights and intelligence.
+
+
+Read More
+HMI/SCADA software in use in industrial operations
+INDUSTRIAL SOFTWARE
+Proficy HMI / SCADA
+Drive smarter operator decisions with model-based high performance HMI for faster response and development.
+
+
+Read More
+Electrification Software transforms how our customers solve their toughest challenges by putting industrial data to work.
+RETURN TO TOP
+About Electrification Software
+Industry Analysts Reports
+News and Press Releases
+Events
+IIoT Blog
+Resources
+Documentation
+A to Z Product Listing
+Inclusion & Diversity
+Digital Careers
+Partner Finder
+Trust Center
+© 2024 GE Vernova and/or its affiliates. All rights reserved.
+Privacy
+Terms
+Cookies
+Accessibility

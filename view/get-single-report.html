@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Report</title>
+    <style>
+        #report {
+            font-family: Arial, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>Report</h1>
+
+    <form id="reportForm">
+        <label for="reportId">Report ID:</label>
+        <input type="text" id="reportId" name="reportId">
+        <input type="submit" value="Get Report">
+    </form>
+
+    <div id="report"></div>
+
+    <script>
+        document.getElementById('reportForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the form from being submitted normally
+    
+            const reportId = document.getElementById('reportId').value;
+    
+            // Fetch the report data
+            fetch(`http://localhost:3000/reports/${reportId}`)
+                .then(response => response.json())
+                .then(report => {
+                    // Create a list to display the words and their counts
+                    const list = document.createElement('ul');
+    
+                    report.words.forEach(([word, count]) => {
+                        const listItem = document.createElement('li');
+                        listItem.textContent = `${word}: ${count}`;
+                        list.appendChild(listItem);
+                    });
+    
+                    // Clear the report div and add the new list
+                    const reportDiv = document.getElementById('report');
+                    reportDiv.innerHTML = '';
+                    reportDiv.appendChild(list);
+                })
+                .catch(error => {
+                    console.error('Failed to fetch report:', error);
+                });
+        });
+    </script>
+</body>
+</html>

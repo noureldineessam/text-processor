@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Send Report</title>
+</head>
+<body>
+    <h1>Send Report</h1>
+
+    <form id="sendReportForm">
+        <label for="reportId">Report ID:</label>
+        <input type="text" id="reportId" name="reportId" required>
+        <input type="submit" value="Send Report">
+    </form>
+
+    <script>
+        document.getElementById('sendReportForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the form from being submitted normally
+
+            const reportId = document.getElementById('reportId').value;
+
+            // Send the report ID to the server
+            fetch('http://localhost:3000/users/send-report', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ reportId }),
+            })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Failed to send report');
+                }
+                alert('Report sent successfully');
+            })
+            .catch(error => {
+                console.error('Failed to send report:', error);
+                alert('Failed to send report');
+            });
+        });
+    </script>
+</body>
+</html>
