@@ -57,7 +57,7 @@ These HTML files provide intuitive interfaces for users to interact with the app
 ## APIs
 
 Swagger Documentation
-Swagger documentation is available for both APIs. After running the application locally, navigate to
+Swagger documentation is available for all APIs. After running the application locally, navigate to
 ``` 
 http://localhost:3000/api
 ``` 
